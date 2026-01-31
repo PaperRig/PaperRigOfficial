@@ -178,17 +178,7 @@ body {
 
 /* Modal Styling */
 .modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  align-items: center;
-  justify-content: center;
-}
-
-/* Modal Styling */
-.modal {
-  display: none;
+  display: none;  /* Hidden by default */
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
