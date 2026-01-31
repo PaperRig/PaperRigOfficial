@@ -8,13 +8,6 @@
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />
 
-  <!-- OG Tags (Social Preview) -->
-  <meta property="og:title" content="PaperRig - Minecraft Optimizer" />
-  <meta property="og:description" content="Smart Minecraft optimizations. Download API first, then install v1 or v2." />
-  <meta property="og:image" content="/og.png" />
-  <meta property="og:url" content="https://www.paperrig.store" />
-  <meta name="twitter:card" content="summary_large_image" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -29,16 +22,20 @@
   </header>
 
   <main class="container">
-    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-left">
         <h2>PaperRig</h2>
         <p>
-          Professional Minecraft mod with smart optimizations. Download the API first, then install the mod versions.
+          Professional Minecraft mod with smart optimizations. Download the API
+          first, then install the mod versions.
         </p>
         <div class="hero-buttons">
-          <button class="btn primary" onclick="downloadApi()">Download API</button>
-          <button class="btn secondary" onclick="openModal()">API Required Info</button>
+          <button class="btn primary" onclick="downloadApi()">
+            Download API
+          </button>
+          <button class="btn secondary" onclick="openModal()">
+            API Required Info
+          </button>
         </div>
         <div class="badge">
           <span class="badge-label">Works on</span>
@@ -50,134 +47,57 @@
       </div>
     </section>
 
-    <!-- System Requirements Section -->
-    <section class="system">
-      <div class="section-title">
-        <h3>System Requirements</h3>
-        <p>Everything you need to run PaperRig smoothly.</p>
-      </div>
-      <div class="system-grid">
-        <div class="system-card">
-          <h4>Minecraft Version</h4>
-          <p>1.21.1 (stable)</p>
-        </div>
-        <div class="system-card">
-          <h4>Java</h4>
-          <p>17+</p>
-        </div>
-        <div class="system-card">
-          <h4>Platform</h4>
-          <p>Paper or Fabric</p>
-        </div>
-        <div class="system-card">
-          <h4>API</h4>
-          <p>Required</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Installation Section -->
-    <section class="install">
-      <div class="section-title">
-        <h3>How to Install</h3>
-        <p>Simple steps for quick setup.</p>
-      </div>
-      <ol class="install-list">
-        <li>Download the <strong>API</strong></li>
-        <li>Download the mod version (v1 or v2)</li>
-        <li>Place both files in your <strong>mods</strong> folder</li>
-        <li>Launch Minecraft</li>
-      </ol>
-    </section>
-
-    <!-- Downloads Section -->
     <section class="downloads">
-      <div class="section-title">
-        <h3>Downloads</h3>
-        <p>Pick the version you want.</p>
-      </div>
-
-      <div class="download-badges">
-        <span class="badge-popular">Popular</span>
-        <span class="badge-reco">Recommended</span>
-      </div>
-
+      <h3>Downloads</h3>
       <div class="grid">
+        <!-- PaperRig v1 -->
         <div class="card">
           <img src="v1.png" alt="PaperRig v1" class="card-image" />
           <div class="card-body">
             <h4>PaperRig v1</h4>
             <p class="desc">
-              Smart optimizations in Feather. Keybinds: P = menu, O = toggle GUI, G = turn off, H = switch winner.
+              Smart optimizations in Feather, completely hidden. Only higher or
+              lower rig. Keybinds: P = menu, O = toggle GUI, G = turn off, H =
+              switch winner.
             </p>
             <div class="row">
               <span class="downloads-count">153,912 downloads</span>
-              <button class="btn small" onclick="downloadV1()">Download v1</button>
+              <button class="btn small" onclick="downloadV1()">
+                Download v1
+              </button>
             </div>
           </div>
         </div>
 
+        <!-- PaperRig v2 -->
         <div class="card">
           <img src="v2.png" alt="PaperRig v2" class="card-image" />
           <div class="card-body">
             <h4>PaperRig v2</h4>
             <p class="desc">
-              Hidden smart optimizations. Higher/lower, 50/50 and blackjack. Keybinds: P = menu, O = toggle GUI, G = turn off.
+              Hidden smart optimizations in mods. Higher/lower, 50/50 and
+              blackjack. Keybinds: P = menu, O = toggle GUI, G = turn off, H =
+              switch winner.
             </p>
             <div class="row">
               <span class="downloads-count">94,102 downloads</span>
-              <button class="btn small" onclick="downloadV2()">Download v2</button>
+              <button class="btn small" onclick="downloadV2()">
+                Download v2
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-      <div class="section-title">
-        <h3>FAQ</h3>
-        <p>Answers to the most common questions.</p>
-      </div>
-
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h4>Do I need the API?</h4>
-          <p>Yes — the mod will not work without the API.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Which versions are supported?</h4>
-          <p>Stable on 1.21.1. Other versions are currently in testing.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Can I use both versions?</h4>
-          <p>Yes, but only one version should be active at a time.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Is this safe?</h4>
-          <p>Yes — always download from the official site and scan files if needed.</p>
-        </div>
-      </div>
-    </section>
   </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2026 PaperRig. All Rights Reserved.</p>
-      <div class="footer-links">
-        <a href="#" class="footer-link">Privacy</a>
-        <a href="#" class="footer-link">Terms</a>
-        <a href="#" class="footer-link">Contact</a>
-      </div>
-    </div>
-  </footer>
 
   <!-- Modal -->
   <div class="modal" id="modal">
     <div class="modal-content">
       <h3>API Required</h3>
-      <p>The PaperRig API is required for the mod to work. Download it first, then you can download v1 and v2.</p>
+      <p>
+        The PaperRig API is required for the mod to work. Download it first, then you can download v1 and v2.
+      </p>
       <div class="modal-buttons">
         <button class="btn primary" onclick="downloadApi(true)">Download API</button>
         <button class="btn secondary" onclick="closeModal()">Close</button>
@@ -188,3 +108,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
