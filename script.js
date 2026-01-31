@@ -1,5 +1,6 @@
 function downloadApi() {
   window.location.href = "downloads/api.zip";
+  closeModal(); // Close the modal when the API is downloaded
 }
 
 function downloadV1() {
