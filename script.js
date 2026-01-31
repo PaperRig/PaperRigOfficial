@@ -4,13 +4,13 @@ let isApiDownloaded = false;
 function downloadApi() {
   // Start downloading the API
   window.location.href = 'https://github.com/PaperRig/PaperRigOfficial/raw/main/downloads/paperrig-api.jar';
-
+  
   // After starting the download, mark the API as downloaded
   isApiDownloaded = true;
 
   // Close the modal
   closeModal();
-
+  
   // Optionally, show a message like "API downloaded, now download mod versions."
   alert("API downloaded! Now you can download v1 or v2.");
 }
@@ -42,3 +42,4 @@ function openModal() {
 function closeModal() {
   document.getElementById('modal').style.display = 'none';
 }
+
