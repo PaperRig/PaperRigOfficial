@@ -1,50 +1,80 @@
-/* General Reset */
-* {
+/* --------------------------------
+   GLOBAL STYLES
+-------------------------------- */
+
+/* Root Colors and Variables */
+:root {
+  --primary-bg: #2d2d2d;
+  --secondary-bg: #1f1f1f;
+  --highlight-color: #ff9800; /* Your main accent color */
+  --text-color: #f2f2f2;
+  --muted-text: #aaa;
+  --button-bg: #ff9800;
+  --button-hover-bg: #ff5722;
+  --button-text-color: #fff;
+  --card-bg: #333;
+  --card-hover-bg: #444;
+}
+
+/* Body and global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  line-height: 1.6;
+/* Links */
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
 }
 
-/* Header */
-.topbar {
-  background-color: #222;
-  color: white;
-  padding: 15px;
+a:hover {
+  text-decoration: underline;
 }
 
-.topbar .logo {
+/* Header Styles */
+header.topbar {
+  background-color: var(--secondary-bg);
+  padding: 20px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+header .logo {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
-.topbar .logo h1 {
-  margin-left: 10px;
+header .logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--text-color);
 }
 
-.topbar .logo-text {
-  font-size: 1.5rem;
+header .logo span {
+  color: var(--muted-text);
 }
 
-/* Main Section */
+/* Main Content */
 .container {
+  margin-top: 80px;
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 .hero-left {
@@ -52,54 +82,71 @@ body {
 }
 
 .hero h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: var(--highlight-color);
+}
+
+.hero p {
+  color: var(--muted-text);
 }
 
 .hero .hero-buttons {
   margin-top: 20px;
 }
 
+.hero-buttons .btn {
+  background-color: var(--button-bg);
+  border: none;
+  padding: 12px 20px;
+  color: var(--button-text-color);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  background-color: var(--button-hover-bg);
+}
+
 .hero .badge {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
-.hero img {
-  max-width: 100%;
-  height: auto;
+.hero .badge-label {
+  color: var(--muted-text);
 }
 
-/* Download Section */
+.hero .badge-value {
+  font-weight: bold;
+  color: var(--highlight-color);
+}
+
+/* Downloads Section */
 .downloads {
   margin-top: 40px;
 }
 
 .downloads h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--highlight-color);
 }
 
-.grid {
-  display: flex;
-  gap: 20px;
+.downloads .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 48%;
-}
-
-.card .card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-body {
+  background-color: var(--card-bg);
   padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: var(--card-hover-bg);
 }
 
 .card .card-top {
@@ -108,141 +155,119 @@ body {
   align-items: center;
 }
 
-.card .badge {
-  font-size: 0.9rem;
-  color: #fff;
-  background-color: #007bff;
-  padding: 5px 10px;
-  border-radius: 15px;
-}
-
-.card .badge-popular {
-  background-color: #f39c12;
-}
-
-.card .badge-recommended {
-  background-color: #27ae60;
-}
-
 .card h4 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.card p.desc {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.card .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card .downloads-count {
-  font-size: 0.9rem;
-  color: #777;
-}
-
-.card .btn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-
-.card .btn:hover {
-  background-color: #0056b3;
-}
-
-.card .btn.small {
-  padding: 8px 16px;
-}
-
-.card .btn.glow {
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
-}
-
-.install {
-  margin-top: 50px;
-}
-
-.install h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-.install-grid {
-  display: flex;
-  gap: 20px;
-}
-
-.install-card {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
-}
-
-.install-card h4 {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
 
-.install-card ul,
-.install-card ol {
-  font-size: 1rem;
-  line-height: 1.5;
+.card .badge {
+  background-color: var(--highlight-color);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--text-color);
 }
 
-.install-card ul li,
-.install-card ol li {
+.card .desc {
+  font-size: 1rem;
+  color: var(--muted-text);
+  margin-bottom: 20px;
+}
+
+.card .downloads-count {
+  color: var(--muted-text);
+}
+
+.card .btn {
+  background-color: var(--button-bg);
+  padding: 10px 20px;
+  color: var(--button-text-color);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.card .btn:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Install Section */
+.install {
+  background-color: var(--secondary-bg);
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 60px;
+}
+
+.install h3 {
+  font-size: 2rem;
+  color: var(--highlight-color);
+}
+
+.install-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.install-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  width: 48%;
+}
+
+.install-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--highlight-color);
+}
+
+.install-card ul, .install-card ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.install-card li {
   margin-bottom: 10px;
+  color: var(--muted-text);
 }
 
 /* FAQ Section */
 .faq {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .faq h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--highlight-color);
 }
 
 .faq-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .faq-item {
-  background-color: white;
-  border-radius: 10px;
+  background-color: var(--card-bg);
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
+  border-radius: 10px;
 }
 
 .faq-item h4 {
   font-size: 1.3rem;
-  margin-bottom: 10px;
+  color: var(--highlight-color);
 }
 
 .faq-item p {
-  font-size: 1rem;
-  color: #777;
+  color: var(--muted-text);
 }
 
 /* Footer */
 .footer {
-  background-color: #222;
-  color: white;
+  background-color: var(--secondary-bg);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -250,59 +275,61 @@ body {
 }
 
 .footer-left {
-  font-size: 0.9rem;
+  color: var(--muted-text);
 }
 
 .footer-right a {
-  margin-left: 15px;
-  color: white;
-  text-decoration: none;
+  color: var(--highlight-color);
+  margin-left: 20px;
+  font-size: 1rem;
 }
 
 .footer-right a:hover {
   text-decoration: underline;
 }
 
-/* Modal */
+/* -----------------------------
+   MODAL (Centered + Overlay)
+----------------------------- */
+
 #modal {
   display: none;
   position: fixed;
-  top: 50%;          /* Center vertically */
-  left: 50%;         /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust for exact center */
-  width: 400px;      /* You can adjust this width */
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  z-index: 1000; /* Ensures it's above other content */
+  inset: 0;                 /* Full screen */
+  background: rgba(0, 0, 0, 0.55); /* Dim background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
 .modal-content {
-  padding: 20px;
-  background-color: #333;
-  border-radius: 8px;
+  width: min(480px, 90%);
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.modal-content p {
+  color: var(--muted-text);
+  margin-bottom: 18px;
 }
 
 .modal-buttons {
-  margin-top: 20px;
-}
-
-.modal-buttons button {
-  margin: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .modal-buttons .btn {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.modal-buttons .btn:hover {
-  background-color: #0056b3;
+  min-width: 140px;
 }
