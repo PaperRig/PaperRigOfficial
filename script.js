@@ -1,20 +1,16 @@
-function downloadApi() {
-  window.location.href = "downloads/api.zip";
-  closeModal(); // Close the modal when the API is downloaded
-}
-
 function downloadV1() {
-  window.location.href = "downloads/paperrig-v1.zip";
+  window.location.href = 'https://github.com/PaperRig/PaperRigOfficial/raw/main/downloads/paperrig-v1.jar';
 }
 
 function downloadV2() {
-  window.location.href = "downloads/paperrig-v2.zip";
+  window.location.href = 'https://github.com/PaperRig/PaperRigOfficial/raw/main/downloads/paperrig-v2.jar';
 }
 
-function openModal() {
-  document.getElementById("modal").style.display = "flex";
+function downloadApi() {
+  window.location.href = 'https://github.com/PaperRig/PaperRigOfficial/raw/main/downloads/paperrig-api.jar';
+  closeModal(); // Close the modal once the API is downloaded
 }
 
 function closeModal() {
-  document.getElementById("modal").style.display = "none";
+  document.getElementById('modal').style.display = 'none';
 }
