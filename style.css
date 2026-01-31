@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #0b0f1a, #1b2430);
@@ -35,12 +36,14 @@ body {
   font-size: 14px;
 }
 
+/* Main Container */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* Hero Section */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -74,6 +77,12 @@ body {
   margin-right: 10px;
 }
 
+/* Update for v1 and v2 download buttons */
+.card .btn {
+  background: linear-gradient(135deg, #7c3aed, #22c55e); /* Same gradient as Download API */
+  color: white;
+}
+
 .btn.primary {
   background: linear-gradient(135deg, #7c3aed, #22c55e);
   color: white;
@@ -84,6 +93,7 @@ body {
   color: white;
 }
 
+/* Badge Styling for Popular and Recommended */
 .badge {
   margin-top: 20px;
   display: inline-flex;
@@ -91,6 +101,16 @@ body {
   padding: 10px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1);
+}
+
+.badge-popular {
+  background: rgba(124, 58, 237, 0.1);  /* Light Purple */
+  color: #7c3aed;  /* Purple color for Popular */
+}
+
+.badge-recommended {
+  background: rgba(34, 197, 94, 0.1); /* Light Green */
+  color: #22c55e; /* Green color for Recommended */
 }
 
 .badge-label {
@@ -101,11 +121,20 @@ body {
   font-weight: bold;
 }
 
+/* Image Adjustments */
 .hero-image {
   width: 100%;
   border-radius: 12px;
 }
 
+.card-image {
+  width: 100%;
+  height: 220px;  /* Increased height for better visibility */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Downloads Section */
 .downloads {
   padding: 20px;
   background: rgba(255, 255, 255, 0.05);
@@ -118,7 +147,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));  /* Flexible grid */
   gap: 20px;
 }
 
@@ -128,14 +157,8 @@ body {
   overflow: hidden;
 }
 
-.card-image {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
 .card-body {
-  padding: 15px;
+  padding: 20px; /* Adjusted padding for more space */
 }
 
 .desc {
@@ -153,6 +176,7 @@ body {
   font-weight: bold;
 }
 
+/* Modal Styling */
 .modal {
   display: none;
   position: fixed;
@@ -176,6 +200,18 @@ body {
   margin-top: 20px;
 }
 
+/* Footer */
+.footer {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.footer-left {
+  color: #cbd5e1;
+}
+
+/* Responsive Design */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
