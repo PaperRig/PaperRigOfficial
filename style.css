@@ -186,6 +186,17 @@ body {
   justify-content: center;
 }
 
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex; /* Ensure the modal uses flexbox for centering */
+  align-items: center;
+  justify-content: center;
+}
+
 .modal-content {
   background: #0b0f1a;
   padding: 20px;
@@ -196,7 +207,8 @@ body {
 
 .modal-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;  /* Center the buttons */
+  gap: 10px; /* Space out the buttons */
   margin-top: 20px;
 }
 
