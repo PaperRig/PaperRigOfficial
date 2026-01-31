@@ -1,48 +1,40 @@
-const downloadCounts = {
-  api: 0,
-  v1: 153912,
-  v2: 94102
-};
+const API_KEY = "paperrig_api_downloaded";
 
-function startDownload(type) {
-  if (type !== "api") {
-    // If API not downloaded, show popup
-    showPopup();
-    return;
-  }
-
-  downloadFile("api");
+function isApiDownloaded() {
+  return localStorage.getItem(API_KEY) === "true";
 }
 
-function downloadFile(type) {
-  const links = {
-    api: "downloads/paperrig-api.jar",
-    v1: "downloads/paperrig-v1.jar",
-    v2: "downloads/paperrig-v2.jar"
-  };
-
-  const link = document.createElement("a");
-  link.href = links[type];
-  link.download = links[type].split("/").pop();
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-
-  if (type === "v1" || type === "v2") {
-    downloadCounts[type]++;
-  }
+function setApiDownloaded() {
+  localStorage.setItem(API_KEY, "true");
 }
 
-function showPopup() {
-  document.getElementById("api-popup").classList.remove("hidden");
+function openModal() {
+  document.getElementById("modal").classList.add("show");
 }
 
-function closePopup() {
-  document.getElementById("api-popup").classList.add("hidden");
+function closeModal() {
+  document.getElementById("modal").classList.remove("show");
 }
 
 function downloadApi() {
-  closePopup();
-  downloadFile("api");
+  setApiDownloaded();
+  window.location.href = "downloads/paperrig-api.jar";
 }
 
+function requireApi() {
+  if (!isApiDownloaded()) {
+    openModal();
+    return false;
+  }
+  return true;
+}
+
+function downloadV1() {
+  if (!requireApi()) return;
+  window.location.href = "downloads/paperrig-v1.jar";
+}
+
+function downloadV2() {
+  if (!requireApi()) return;
+  window.location.href = "downloads/paperrig-v2.jar";
+}
