@@ -1,6 +1,7 @@
 // Flag to track if the API is downloaded or not
 let isApiDownloaded = false;
 
+// Function to start downloading the API
 function downloadApi() {
   // Start downloading the API
   window.location.href = 'https://github.com/PaperRig/PaperRigOfficial/raw/main/downloads/paperrig-api.jar';
@@ -8,13 +9,14 @@ function downloadApi() {
   // After starting the download, mark the API as downloaded
   isApiDownloaded = true;
 
-  // Close the modal
+  // Close the modal after downloading the API
   closeModal();
   
-  // Optionally, show a message like "API downloaded, now download mod versions."
+  // Optionally, show a message like "API downloaded, now download v1 or v2."
   alert("API downloaded! Now you can download v1 or v2.");
 }
 
+// Function to download v1
 function downloadV1() {
   if (!isApiDownloaded) {
     // If the API isn't downloaded, show the modal
@@ -25,6 +27,7 @@ function downloadV1() {
   }
 }
 
+// Function to download v2
 function downloadV2() {
   if (!isApiDownloaded) {
     // If the API isn't downloaded, show the modal
@@ -35,11 +38,14 @@ function downloadV2() {
   }
 }
 
+// Function to open the modal
 function openModal() {
-  document.getElementById('modal').style.display = 'block';
+  // Show the modal when the user tries to download v1 or v2 without the API
+  document.getElementById('modal').style.display = 'flex';
 }
 
+// Function to close the modal
 function closeModal() {
+  // Hide the modal
   document.getElementById('modal').style.display = 'none';
 }
-
