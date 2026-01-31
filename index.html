@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PaperRig</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">PaperRig</span>
+      </div>
+      <nav class="nav">
+        <a href="#downloads">Downloads</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <h1>PaperRig</h1>
+            <p>Smart optimizations for Minecraft — clean, fast, and hidden.</p>
+            <div class="hero-cta">
+              <a class="btn primary" href="#downloads">Download</a>
+              <a class="btn secondary" href="#about">Learn more</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <img src="api.png" alt="PaperRig API" />
+            <div class="hero-card-info">
+              <h2>API Required</h2>
+              <p>Required for PaperRig to work. Works on Minecraft 1.21.x</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="downloads" class="downloads">
+        <div class="section-header">
+          <h2>Downloads</h2>
+          <p>Stable versions, ready to use on Minecraft 1.21.1</p>
+        </div>
+
+        <div class="cards">
+          <!-- API -->
+          <article class="card">
+            <img src="api.png" alt="API" />
+            <div class="card-body">
+              <h3>API (Required)</h3>
+              <p>Needed for PaperRig to work. Works on versions 1.21.x. Download name: <b>meteor-api</b>.</p>
+              <div class="card-meta">
+                <span class="badge">Version: 1.21.x</span>
+                <span class="badge">Required</span>
+              </div>
+              <button class="btn primary" onclick="startDownload('api')">Download API</button>
+            </div>
+          </article>
+
+          <!-- PaperRig v1 -->
+          <article class="card">
+            <img src="v1.png" alt="PaperRig v1" />
+            <div class="card-body">
+              <h3>PaperRig v1</h3>
+              <p>
+                Smart optimizations in feather, completely hidden.  
+                Higher or lower rig. Keybinds: P = menu, O = toggle GUI, G = turn off, H = switch winner.
+              </p>
+              <div class="card-meta">
+                <span class="badge">Stable</span>
+                <span class="badge">Last updated: 02/01/26</span>
+                <span class="badge">Downloads: 153,912</span>
+              </div>
+              <button class="btn primary" onclick="startDownload('v1')">Download v1</button>
+            </div>
+          </article>
+
+          <!-- PaperRig v2 -->
+          <article class="card">
+            <img src="v2.png" alt="PaperRig v2" />
+            <div class="card-body">
+              <h3>PaperRig v2</h3>
+              <p>
+                Hidden as smart optimizations in mods. Has higher/lower, 50/50 and blackjack.  
+                Keybinds: P = menu, O = toggle GUI, G = turn off, H = switch winner.
+              </p>
+              <div class="card-meta">
+                <span class="badge">Stable</span>
+                <span class="badge">Last updated: 29/01/26</span>
+                <span class="badge">Downloads: 94,102</span>
+              </div>
+              <button class="btn primary" onclick="startDownload('v2')">Download v2</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="section-header">
+          <h2>About PaperRig</h2>
+          <p>PaperRig is a lightweight Minecraft mod focused on performance and hidden optimization.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Fast</h3>
+            <p>Optimized for minimal impact and maximum speed.</p>
+          </div>
+          <div class="about-card">
+            <h3>Hidden</h3>
+            <p>Everything runs silently with no visible overhead.</p>
+          </div>
+          <div class="about-card">
+            <h3>Clean UI</h3>
+            <p>Simple keybinds and easy configuration.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Need help or want to report a bug? Contact us.</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-item">
+            <h3>Email</h3>
+            <p>support@paperrig.store</p>
+          </div>
+          <div class="contact-item">
+            <h3>Discord</h3>
+            <p>PaperRig#0001</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 PaperRig. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <div id="api-popup" class="popup hidden">
+    <div class="popup-inner">
+      <h2>API Required</h2>
+      <p>PaperRig requires the API to work. Make sure you download the API first.</p>
+      <div class="popup-actions">
+        <button class="btn secondary" onclick="closePopup()">Close</button>
+        <button class="btn primary" onclick="downloadApi()">Download API</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
