@@ -8,7 +8,7 @@ function downloadV1() {
 }
 
 function downloadV2() {
-  window.location.href = "downloads/paperrig-v2.zip";
+  window.location.href = "https://github.com/PaperRig/PaperRigOfficial/raw/refs/heads/main/downloads/paperrig-v2.jar";
 }
 
 function openModal() {
