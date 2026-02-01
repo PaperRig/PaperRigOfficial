@@ -1,58 +1,20 @@
-// Flag to track if the API is downloaded or not
-let isApiDownloaded = false;
-
-// Function to start downloading the API
 function downloadApi() {
-    // Start downloading the API
-    window.location.href = 'https://github.com/PaperRig/PaperRigOfficial/raw/main/downloads/paperrig-api.jar';
-    // After starting the download, mark the API as downloaded
-    isApiDownloaded = true;
-    // Close the modal after downloading the API
-    closeModal();
-    // Optionally, show a message like "API downloaded, now download v1 or v2."
-    alert("API downloaded! Now you can download v1 or v2.");
+  window.location.href = "downloads/api.zip";
+  closeModal(); // Close the modal when the API is downloaded
 }
 
-// Function to download v1
 function downloadV1() {
-    // Log for debugging
-    console.log('Attempting to download v1');
-    
-    if (!isApiDownloaded) {
-        // If the API isn't downloaded, show the modal
-        console.log('API not downloaded, showing modal');
-        openModal();
-    } else {
-        // If API is downloaded, download v1
-        console.log('API is downloaded, downloading v1');
-        window.location.href = 'https://github.com/PaperRig/PaperRigOfficial/raw/main/downloads/paperrig-v1.jar';
-    }
+  window.location.href = "downloads/paperrig-v1.zip";
 }
 
-// Function to download v2
 function downloadV2() {
-    // Log for debugging
-    console.log('Attempting to download v2');
-    
-    if (!isApiDownloaded) {
-        // If the API isn't downloaded, show the modal
-        console.log('API not downloaded, showing modal');
-        openModal();
-    } else {
-        // If API is downloaded, download v2
-        console.log('API is downloaded, downloading v2');
-        window.location.href = 'https://github.com/PaperRig/PaperRigOfficial/raw/main/downloads/paperrig-v2.jar';
-    }
+  window.location.href = "downloads/paperrig-v2.zip";
 }
 
-// Function to open the modal
 function openModal() {
-    // Show the modal when the user tries to download v1 or v2 without the API
-    document.getElementById('modal').style.display = 'flex';
+  document.getElementById("modal").style.display = "flex";
 }
 
-// Function to close the modal
 function closeModal() {
-    // Hide the modal
-    document.getElementById('modal').style.display = 'none';
+  document.getElementById("modal").style.display = "none";
 }
