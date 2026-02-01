@@ -1,5 +1,5 @@
 function downloadApi() {
-  window.location.href = "downloads/api.zip";
+  window.location.href = "https://github.com/PaperRig/PaperRigOfficial/raw/refs/heads/main/downloads/paperrig-api.jar";
   closeModal(); // Close the modal when the API is downloaded
 }
 
