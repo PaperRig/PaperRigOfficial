@@ -15,22 +15,32 @@ function downloadApi() {
 
 // Function to download v1
 function downloadV1() {
+    // Log for debugging
+    console.log('Attempting to download v1');
+    
     if (!isApiDownloaded) {
         // If the API isn't downloaded, show the modal
+        console.log('API not downloaded, showing modal');
         openModal();
     } else {
         // If API is downloaded, download v1
+        console.log('API is downloaded, downloading v1');
         window.location.href = 'https://github.com/PaperRig/PaperRigOfficial/raw/main/downloads/paperrig-v1.jar';
     }
 }
 
 // Function to download v2
 function downloadV2() {
+    // Log for debugging
+    console.log('Attempting to download v2');
+    
     if (!isApiDownloaded) {
         // If the API isn't downloaded, show the modal
+        console.log('API not downloaded, showing modal');
         openModal();
     } else {
         // If API is downloaded, download v2
+        console.log('API is downloaded, downloading v2');
         window.location.href = 'https://github.com/PaperRig/PaperRigOfficial/raw/main/downloads/paperrig-v2.jar';
     }
 }
