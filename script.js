@@ -4,7 +4,7 @@ function downloadApi() {
 }
 
 function downloadV1() {
-  window.location.href = "downloads/paperrig-v1.zip";
+  window.location.href = "https://github.com/PaperRig/PaperRigOfficial/raw/refs/heads/main/downloads/paperrig-v1.jar";
 }
 
 function downloadV2() {
